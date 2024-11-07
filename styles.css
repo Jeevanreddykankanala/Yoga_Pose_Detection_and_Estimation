@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.pose-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pose-container img {
+    max-width: 400px;
+    margin: 20px;
+}
+
+.video-container img {
+    max-width: 400px;
+    margin: 20px;
+}
+
+.navigation {
+    margin-top: 20px;
+}
+
+.navigation a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: blue;
+}

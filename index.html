@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Pose Detection</title>
+    <style>
+        #video-feed {
+            width: 640px;
+            height: 480px;
+            position: relative;
+        }
+        #status {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 20px;
+            color: green;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            border-radius: 5px;
+        }
+        #reference-image {
+            width: 300px;
+            height: 400px;
+        }
+        #controls {
+            margin-top: 10px;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Yoga Pose Detection</h1>
+    <div>
+        <img id="reference-image" src="{{ url_for('static', filename='images/' + image_filename) }}" alt="Reference Pose">
+    </div>
+    <br>
+    <div id="video-feed">
+        <img id="video-frame" src="{{ url_for('video_feed') }}" alt="Video Feed">
+        <div id="status"></div>
+    </div>
+    <div id="controls">
+        <a href="{{ url_for('previous_pose') }}"><button>Previous Pose</button></a>
+        <a href="{{ url_for('next_pose') }}"><button>Next Pose</button></a>
+    </div>
+</body>
+</html>
